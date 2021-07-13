@@ -2,8 +2,6 @@ import { Container, Section, Title, Subtitle, Value, Button } from './ResultDisp
 import PropTypes from 'prop-types';
 
 export default function ResultsDisplay({ total, tip, onReset }) {
-  total, tip, onReset;
-
   return (
     <Container>
       <div>

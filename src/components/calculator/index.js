@@ -29,10 +29,23 @@ const Separator = styled.div`
   min-height: 2.5em;
 `;
 
+const calculate = (bill, tip, people) => {
+  const totalTip = (tip / 100) * bill;
+  const total = bill + totalTip;
+
+  const rounded = value => (Math.round(value * 100) / 100).toFixed(2);
+
+  if (people != 0) return { tip: rounded(totalTip / people), total: rounded(total / people) };
+  else return { tip: '0.00', total: '0.00' };
+};
+
 export default function Calculator() {
   const [bill, setBill] = useState(0);
   const [tip, setTip] = useState(0);
   const [people, setPeolple] = useState(0);
+
+  const [person, setPerson] = useState({ tip: '0.00', total: '0.00' });
+  person;
 
   const handleReset = () => {
     setBill(0);
@@ -40,22 +53,33 @@ export default function Calculator() {
     setPeolple(0);
   };
 
+  const handleBillChange = newBill => {
+    setBill(newBill);
+    setPerson(calculate(newBill, tip, people));
+  };
+
+  const handleTipChange = newTip => {
+    setTip(newTip);
+    setPerson(calculate(bill, newTip, people));
+  };
+
+  const handlePeopleChange = newPeople => {
+    setPeolple(newPeople);
+    setPerson(calculate(bill, tip, newPeople));
+  };
+
   return (
     <Container>
       <Column style={{ padding: '0.6em 1em' }}>
-        <BillInput value={bill} onValueChange={value => setBill(value)} />
+        <BillInput value={bill} onValueChange={handleBillChange} />
         <Separator />
-        <TipSelector value={tip} onSelect={value => setTip(value)} />
+        <TipSelector value={tip} onSelect={handleTipChange} />
         <Separator />
-        <NumberOfPeopleInput value={people} onValueChange={value => setPeolple(value)} />
+        <NumberOfPeopleInput value={people} onValueChange={handlePeopleChange} />
       </Column>
 
       <Column>
-        <ResultsDisplay
-          total={(Math.round(0 * 100) / 100).toFixed(2)}
-          tip={(Math.round(0 * 100) / 100).toFixed(2)}
-          onReset={handleReset}
-        />
+        <ResultsDisplay total={person.total} tip={person.tip} onReset={handleReset} />
       </Column>
     </Container>
   );
