@@ -20,6 +20,11 @@ export const Container = styled.div`
 
   font-size: 1.5em;
   background: ${Colors.lightGrayCyan2};
+  border: 0.1em solid ${Colors.lightGrayCyan2};
+
+  :hover {
+    border: 0.1em solid ${Colors.strongCyan};
+  }
 `;
 
 export const Icon = styled.div`
