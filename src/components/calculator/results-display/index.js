@@ -12,7 +12,7 @@ export default function ResultsDisplay({ total, tip, onReset }) {
             <Title>Tip Amount</Title>
             <Subtitle>/ person</Subtitle>
           </div>
-          <Value>${total}</Value>
+          <Value>${tip}</Value>
         </Section>
 
         <Section>
@@ -20,7 +20,7 @@ export default function ResultsDisplay({ total, tip, onReset }) {
             <Title>Total</Title>
             <Subtitle>/ person</Subtitle>
           </div>
-          <Value>${tip}</Value>
+          <Value>${total}</Value>
         </Section>
       </div>
 
