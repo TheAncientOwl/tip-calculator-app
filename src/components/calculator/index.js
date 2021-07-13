@@ -27,7 +27,7 @@ const Column = styled.div`
 `;
 
 const Separator = styled.div`
-  height: 0.8em;
+  min-height: 2.5em;
 `;
 
 export default function Calculator() {
