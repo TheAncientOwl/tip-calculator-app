@@ -9,7 +9,7 @@ export default function Input({ icon, value, onValueChange, className }) {
         type='number'
         placeholder='0'
         value={value || ''}
-        onChange={e => onValueChange(Number(e.target.value))}
+        onChange={e => onValueChange(Math.abs(Number(e.target.value)))}
       />
     </Container>
   );
