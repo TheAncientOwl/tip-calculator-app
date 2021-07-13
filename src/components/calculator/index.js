@@ -29,14 +29,19 @@ const Separator = styled.div`
   min-height: 2.5em;
 `;
 
-const calculate = (bill, tip, people) => {
+const calculate = (bill, tip, people, setZeroFlag) => {
   const totalTip = (tip / 100) * bill;
   const total = bill + totalTip;
 
   const rounded = value => (Math.round(value * 100) / 100).toFixed(2);
 
-  if (people != 0) return { tip: rounded(totalTip / people), total: rounded(total / people) };
-  else return { tip: '0.00', total: '0.00' };
+  if (people != 0) {
+    setZeroFlag(false);
+    return { tip: rounded(totalTip / people), total: rounded(total / people) };
+  } else {
+    if (bill && tip) setZeroFlag(true);
+    return { tip: '0.00', total: '0.00' };
+  }
 };
 
 export default function Calculator() {
@@ -45,7 +50,7 @@ export default function Calculator() {
   const [people, setPeolple] = useState(0);
 
   const [person, setPerson] = useState({ tip: '0.00', total: '0.00' });
-  person;
+  const [zeroFlag, setZeroFlag] = useState(false);
 
   const handleReset = () => {
     setBill(0);
@@ -55,17 +60,17 @@ export default function Calculator() {
 
   const handleBillChange = newBill => {
     setBill(newBill);
-    setPerson(calculate(newBill, tip, people));
+    setPerson(calculate(newBill, tip, people, setZeroFlag));
   };
 
   const handleTipChange = newTip => {
     setTip(newTip);
-    setPerson(calculate(bill, newTip, people));
+    setPerson(calculate(bill, newTip, people, setZeroFlag));
   };
 
   const handlePeopleChange = newPeople => {
     setPeolple(newPeople);
-    setPerson(calculate(bill, tip, newPeople));
+    setPerson(calculate(bill, tip, newPeople, setZeroFlag));
   };
 
   return (
@@ -75,7 +80,7 @@ export default function Calculator() {
         <Separator />
         <TipSelector value={tip} onSelect={handleTipChange} />
         <Separator />
-        <NumberOfPeopleInput value={people} onValueChange={handlePeopleChange} />
+        <NumberOfPeopleInput invalid={zeroFlag} value={people} onValueChange={handlePeopleChange} />
       </Column>
 
       <Column>
