@@ -1,4 +1,4 @@
-import { Title, Section } from '../CommonElements';
+import { SectionTitle, Section } from '../CommonElements';
 import { CustomGridItem, CustomTipInput, Grid, GridItem } from './TipSelectorElements';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
@@ -10,7 +10,7 @@ export default function TipSelector({ value, onSelect }) {
 
   return (
     <Section>
-      <Title>Select Tip %</Title>
+      <SectionTitle>Select Tip %</SectionTitle>
       <Grid>
         {TipValues.map((item, index) => (
           <GridItem

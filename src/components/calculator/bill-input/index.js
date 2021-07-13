@@ -1,11 +1,11 @@
-import { Title, Section } from '../CommonElements';
+import { SectionTitle, Section } from '../CommonElements';
 import Input from '../input';
 import PropTypes from 'prop-types';
 
 export default function BillInput({ value, onValueChange }) {
   return (
     <Section>
-      <Title>Bill</Title>
+      <SectionTitle>Bill</SectionTitle>
       <Input icon='$' value={value} onValueChange={onValueChange} />
     </Section>
   );
