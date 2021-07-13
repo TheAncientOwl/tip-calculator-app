@@ -17,7 +17,6 @@ const Container = styled.div`
 
 const Column = styled.div`
   padding: 0 1em;
-  border-right: 1px solid black;
   width: 50%;
 
   display: flex;
@@ -37,7 +36,7 @@ export default function Calculator() {
 
   return (
     <Container>
-      <Column>
+      <Column style={{ padding: '0.6em 1em' }}>
         <BillInput value={bill} onValueChange={value => setBill(value)} />
         <Separator />
         <TipSelector value={tip} onSelect={value => setTip(value)} />
@@ -46,7 +45,11 @@ export default function Calculator() {
       </Column>
 
       <Column>
-        <ResultsDisplay bill={0} tip={0} people={1} />
+        <ResultsDisplay
+          total={(Math.round(0 * 100) / 100).toFixed(2)}
+          tip={(Math.round(0 * 100) / 100).toFixed(2)}
+          onReset={() => alert('reset')}
+        />
       </Column>
     </Container>
   );
