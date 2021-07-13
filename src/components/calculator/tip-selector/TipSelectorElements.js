@@ -17,10 +17,12 @@ export const GridItem = styled.div(
     font-size: 1.7em;
     text-align: center;
     color: ${selected ? Colors.darkCyan : Colors.white};
-    background: ${selected ? Colors.darkGrayCyan2 : Colors.darkCyan};
+    background: ${selected ? Colors.strongCyan : Colors.darkCyan};
     padding: 0.4em 0.3em;
     border-radius: 0.3em;
     font-weight: bold;
+
+    cursor: pointer;
   `
 );
 
@@ -28,7 +30,7 @@ export const CustomGridItem = styled(GridItem)(
   ({ selected }) => css`
     text-transform: capitalize;
     color: ${selected ? Colors.darkCyan : Colors.darkGrayCyan1};
-    background: ${selected ? Colors.darkGrayCyan2 : Colors.lightGrayCyan2};
+    background: ${selected ? Colors.strongCyan : Colors.lightGrayCyan2};
   `
 );
 

@@ -1,4 +1,5 @@
 const Colors = {
+  strongCyan: 'hsl(172, 67%, 45%)',
   darkCyan: 'hsl(183, 100%, 15%)',
   darkGrayCyan1: 'hsl(186, 14%, 43%)',
   darkGrayCyan2: 'hsl(184, 14%, 56%)',

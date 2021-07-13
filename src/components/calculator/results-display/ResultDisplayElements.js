@@ -29,15 +29,16 @@ export const Title = styled.div`
   color: ${Colors.white};
   font-weight: bold;
   font-size: 1.15em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.25em;
 `;
 
 export const Subtitle = styled.div`
   color: ${Colors.darkGrayCyan2};
+  font-size: 1.05em;
 `;
 
 export const Value = styled.div`
-  color: ${Colors.darkGrayCyan2};
+  color: ${Colors.strongCyan};
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -46,11 +47,13 @@ export const Value = styled.div`
 
 export const Button = styled.div`
   color: ${Colors.darkCyan};
-  background: ${Colors.darkGrayCyan1};
+  background: ${Colors.strongCyan};
   border-radius: 0.5em;
   text-align: center;
   padding: 0.75em 1em;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.15em;
+
+  cursor: pointer;
 `;
