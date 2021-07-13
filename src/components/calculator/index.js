@@ -12,7 +12,7 @@ const Container = styled.div`
   width: 54em;
   margin: 0 1em;
   padding: 2em 1em;
-  border-radius: 0.6em;
+  border-radius: 2em;
 
   display: flex;
 

@@ -10,7 +10,7 @@ export const Container = styled.div`
 
   flex-grow: 1;
   width: 100%;
-  border-radius: 0.5em;
+  border-radius: 1em;
   background: ${Colors.darkCyan};
   padding: 3em 2em 2em;
 

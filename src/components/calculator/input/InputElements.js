@@ -15,7 +15,7 @@ export const Container = styled.div`
   align-items: center;
   gap: 0.3em;
 
-  border-radius: 0.4em;
+  border-radius: 0.5em;
   padding: 0.5em;
 
   font-size: 1.5em;
