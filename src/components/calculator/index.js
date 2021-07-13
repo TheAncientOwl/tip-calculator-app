@@ -31,17 +31,18 @@ const Separator = styled.div`
 `;
 
 export default function Calculator() {
-  const [billValue, setBillValue] = useState(0);
-  const [tipValue, setTipValue] = useState(0);
+  const [bill, setBill] = useState(0);
+  const [tip, setTip] = useState(0);
+  const [people, setPeolple] = useState(0);
 
   return (
     <Container>
       <Column>
-        <BillInput value={billValue} onValueChange={newValue => setBillValue(newValue)} />
+        <BillInput value={bill} onValueChange={value => setBill(value)} />
         <Separator />
-        <TipSelector value={tipValue} onSelect={value => setTipValue(value)} />
+        <TipSelector value={tip} onSelect={value => setTip(value)} />
         <Separator />
-        <NumberOfPeopleInput />
+        <NumberOfPeopleInput value={people} onValueChange={value => setPeolple(value)} />
       </Column>
 
       <Column>
