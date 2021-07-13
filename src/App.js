@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Colors from './Colors';
 import Calculator from './components/calculator';
-import Title from './components/Title';
+import Logo from './components/Logo';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -15,7 +15,7 @@ const Container = styled.div`
 export default function App() {
   return (
     <Container>
-      <Title />
+      <Logo />
       <Calculator />
     </Container>
   );
