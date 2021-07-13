@@ -5,19 +5,46 @@ import TipSelector from './tip-selector';
 import NumberOfPeopleInput from './number-of-people-input';
 import ResultsDisplay from './results-display';
 import { useState } from 'react';
+import Breakpoints from '../../Breakpoints';
 
 const Container = styled.div`
   background: ${Colors.white};
-  width: 60vw;
+  width: 54em;
+  margin: 0 1em;
   padding: 2em 1em;
   border-radius: 0.6em;
 
   display: flex;
+
+  @media (max-width: ${Breakpoints._950}) {
+    font-size: 0.9em;
+  }
+
+  @media (max-width: ${Breakpoints._850}) {
+    font-size: 0.8em;
+  }
+
+  @media (max-width: ${Breakpoints._750}) {
+    font-size: 0.7em;
+  }
+
+  @media (max-width: ${Breakpoints._650}) {
+    flex-direction: column;
+    width: 80vw;
+  }
 `;
 
 const Column = styled.div`
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+
+  font-size: 1em;
+
   padding: 0 1em;
-  width: 50%;
+  width: 100%;
 
   display: flex;
   flex-direction: column;

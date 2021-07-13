@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Colors from './Colors';
 import Calculator from './components/calculator';
 import Logo from './components/Logo';
+import Breakpoints from './Breakpoints';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -10,6 +11,10 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: ${Breakpoints._750}) {
+    padding: 2em 1em;
+  }
 `;
 
 export default function App() {
