@@ -34,6 +34,12 @@ export default function Calculator() {
   const [tip, setTip] = useState(0);
   const [people, setPeolple] = useState(0);
 
+  const handleReset = () => {
+    setBill(0);
+    setTip(0);
+    setPeolple(0);
+  };
+
   return (
     <Container>
       <Column style={{ padding: '0.6em 1em' }}>
@@ -48,7 +54,7 @@ export default function Calculator() {
         <ResultsDisplay
           total={(Math.round(0 * 100) / 100).toFixed(2)}
           tip={(Math.round(0 * 100) / 100).toFixed(2)}
-          onReset={() => alert('reset')}
+          onReset={handleReset}
         />
       </Column>
     </Container>
