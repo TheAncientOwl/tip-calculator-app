@@ -9,6 +9,7 @@ export const Grid = styled.div`
   grid-template-columns: 30% 30% 30%;
   justify-content: space-between;
   margin-top: 1em;
+  gap: 1em;
 `;
 
 export const GridItem = styled.div(
@@ -19,7 +20,6 @@ export const GridItem = styled.div(
     background: ${selected ? Colors.darkGrayCyan2 : Colors.darkCyan};
     padding: 0.4em 0.3em;
     border-radius: 0.3em;
-    margin-bottom: 1em;
     font-weight: bold;
   `
 );
