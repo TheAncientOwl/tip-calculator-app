@@ -19,13 +19,13 @@ export const Container = styled.div`
   padding: 0.5em;
 
   font-size: 1.5em;
-  color: ${Colors.darkCyan};
   background: ${Colors.lightGrayCyan2};
 `;
 
 export const Icon = styled.div`
   font-size: inherit;
   font-weight: bold;
+  color: ${Colors.darkGrayCyan2};
 `;
 
 export const InputField = styled.input`
@@ -33,7 +33,8 @@ export const InputField = styled.input`
 
   border: none;
   outline: none;
-  color: inherit;
+  color: ${Colors.darkCyan};
+
   background: transparent;
 
   text-align: right;
