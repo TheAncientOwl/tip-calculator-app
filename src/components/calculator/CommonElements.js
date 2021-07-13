@@ -6,3 +6,7 @@ export const Title = styled.div`
   font-weight: bold;
   color: ${Colors.darkCyan};
 `;
+
+export const Section = styled.section`
+  width: 100%;
+`;
