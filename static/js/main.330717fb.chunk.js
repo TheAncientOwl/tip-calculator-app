@@ -1,2 +1,0 @@
-(this["webpackJsonptip-calculator-app"]=this["webpackJsonptip-calculator-app"]||[]).push([[0],{10:function(t,e,n){"use strict";n.r(e);var c=n(1),r=n.n(c),i=n(3),o=n.n(i),p=n(0);function a(){return Object(p.jsx)("div",{style:{textAlign:"center",marginTop:"20x",fontSize:"25px"},children:"~ Hello world! ~"})}n(9);o.a.render(Object(p.jsx)(r.a.StrictMode,{children:Object(p.jsx)(a,{})}),document.getElementById("root"))},9:function(t,e,n){}},[[10,1,2]]]);
-//# sourceMappingURL=main.330717fb.chunk.js.map

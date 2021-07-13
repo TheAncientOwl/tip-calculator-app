@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "/tip-calculator-app/static/css/main.8be9312a.chunk.css",
-    "main.js": "/tip-calculator-app/static/js/main.330717fb.chunk.js",
-    "main.js.map": "/tip-calculator-app/static/js/main.330717fb.chunk.js.map",
+    "main.css": "/tip-calculator-app/static/css/main.25bbf1f0.chunk.css",
+    "main.js": "/tip-calculator-app/static/js/main.5b4ec4ff.chunk.js",
+    "main.js.map": "/tip-calculator-app/static/js/main.5b4ec4ff.chunk.js.map",
     "runtime-main.js": "/tip-calculator-app/static/js/runtime-main.bcf9043c.js",
     "runtime-main.js.map": "/tip-calculator-app/static/js/runtime-main.bcf9043c.js.map",
-    "static/js/2.18e8c96f.chunk.js": "/tip-calculator-app/static/js/2.18e8c96f.chunk.js",
-    "static/js/2.18e8c96f.chunk.js.map": "/tip-calculator-app/static/js/2.18e8c96f.chunk.js.map",
+    "static/js/2.5f1c85db.chunk.js": "/tip-calculator-app/static/js/2.5f1c85db.chunk.js",
+    "static/js/2.5f1c85db.chunk.js.map": "/tip-calculator-app/static/js/2.5f1c85db.chunk.js.map",
     "index.html": "/tip-calculator-app/index.html",
-    "static/css/main.8be9312a.chunk.css.map": "/tip-calculator-app/static/css/main.8be9312a.chunk.css.map",
-    "static/js/2.18e8c96f.chunk.js.LICENSE.txt": "/tip-calculator-app/static/js/2.18e8c96f.chunk.js.LICENSE.txt"
+    "static/css/main.25bbf1f0.chunk.css.map": "/tip-calculator-app/static/css/main.25bbf1f0.chunk.css.map",
+    "static/js/2.5f1c85db.chunk.js.LICENSE.txt": "/tip-calculator-app/static/js/2.5f1c85db.chunk.js.LICENSE.txt",
+    "static/media/icon-dollar.9f9be353.svg": "/tip-calculator-app/static/media/icon-dollar.9f9be353.svg",
+    "static/media/icon-person.65bfd204.svg": "/tip-calculator-app/static/media/icon-person.65bfd204.svg",
+    "static/media/logo.3cc0528b.svg": "/tip-calculator-app/static/media/logo.3cc0528b.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.bcf9043c.js",
-    "static/js/2.18e8c96f.chunk.js",
-    "static/css/main.8be9312a.chunk.css",
-    "static/js/main.330717fb.chunk.js"
+    "static/js/2.5f1c85db.chunk.js",
+    "static/css/main.25bbf1f0.chunk.css",
+    "static/js/main.5b4ec4ff.chunk.js"
   ]
 }
