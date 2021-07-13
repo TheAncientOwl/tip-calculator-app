@@ -10,7 +10,7 @@ export const Container = styled.div`
 
   overflow: hidden;
 
-  margin-top: 0.8em;
+  margin-top: 0.35em;
   display: flex;
   align-items: center;
   gap: 0.3em;
