@@ -4,6 +4,7 @@ import BillInput from './bill-input';
 import TipSelector from './tip-selector';
 import NumberOfPeopleInput from './number-of-people-input';
 import ResultsDisplay from './results-display';
+import { useState } from 'react';
 
 const Container = styled.div`
   background: ${Colors.white};
@@ -30,10 +31,12 @@ const Separator = styled.div`
 `;
 
 export default function Calculator() {
+  const [billValue, setBillValue] = useState(0);
+
   return (
     <Container>
       <Column>
-        <BillInput />
+        <BillInput value={billValue} onValueChange={newValue => setBillValue(newValue)} />
         <Separator />
         <TipSelector />
         <Separator />

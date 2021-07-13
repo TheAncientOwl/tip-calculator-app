@@ -2,30 +2,43 @@ import styled from 'styled-components';
 import Colors from '../../../Colors';
 
 export const Container = styled.div`
-  margin-top: 0.8em;
-`;
-
-export const Icon = styled.div``;
-
-export const InputField = styled.input`
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 
-  background: ${Colors.lightGrayCyan2};
-  color: ${Colors.darkCyan};
-  text-align: right;
+  overflow: hidden;
 
-  width: 100%;
-  font-size: 1.5em;
+  margin-top: 0.8em;
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
 
-  font-weight: bold;
-  border: 1px solid ${Colors.lightGrayCyan2};
   border-radius: 0.4em;
   padding: 0.5em;
+
+  font-size: 1.5em;
+  color: ${Colors.darkCyan};
+  background: ${Colors.lightGrayCyan2};
+`;
+
+export const Icon = styled.div`
+  font-size: inherit;
+  font-weight: bold;
+`;
+
+export const InputField = styled.input`
+  width: 100%;
+
+  border: none;
   outline: none;
+  color: inherit;
+  background: transparent;
+
+  text-align: right;
+  font-size: inherit;
+  font-weight: bold;
 
   ::placeholder {
     color: ${Colors.darkGrayCyan2};
