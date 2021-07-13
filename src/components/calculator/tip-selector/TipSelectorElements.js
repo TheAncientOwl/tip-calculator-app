@@ -32,6 +32,6 @@ export const CustomGridItem = styled(GridItem)(
     text-transform: capitalize;
     color: ${selected ? Colors.darkCyan : Colors.darkGrayCyan1};
     background: ${Colors.lightGrayCyan2};
-    border-color: ${selected ? Colors.strongCyan : Colors.darkGrayCyan2};
+    border-color: ${selected ? Colors.strongCyan : Colors.lightGrayCyan2};
   `
 );
