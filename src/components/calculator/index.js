@@ -1,0 +1,48 @@
+import styled from 'styled-components';
+import Colors from '../../Colors';
+import BillInput from './bill-input';
+import TipSelector from './tip-selector';
+import NumberOfPeopleInput from './number-of-people-input';
+import ResultsDisplay from './results-display';
+
+const Container = styled.div`
+  background: ${Colors.white};
+  width: 60vw;
+  padding: 2em 1em;
+  border-radius: 0.6em;
+
+  display: flex;
+`;
+
+const Column = styled.div`
+  padding: 0 1em;
+  border-right: 1px solid black;
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Separator = styled.div`
+  height: 0.8em;
+`;
+
+export default function Calculator() {
+  return (
+    <Container>
+      <Column>
+        <BillInput />
+        <Separator />
+        <TipSelector />
+        <Separator />
+        <NumberOfPeopleInput />
+      </Column>
+
+      <Column>
+        <ResultsDisplay bill={0} tip={0} people={1} />
+      </Column>
+    </Container>
+  );
+}
