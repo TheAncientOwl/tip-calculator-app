@@ -46,6 +46,8 @@ export const InputField = styled.input`
   font-size: inherit;
   font-weight: bold;
 
+  caret-color: ${Colors.strongCyan};
+
   ::placeholder {
     color: ${Colors.darkGrayCyan2};
     opacity: 0.7;

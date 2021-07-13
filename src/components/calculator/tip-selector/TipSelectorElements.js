@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import Colors from '../../../Colors';
-import Input from '../input/index';
 
 export const Container = styled.div``;
 
@@ -23,6 +22,8 @@ export const GridItem = styled.div(
     font-weight: bold;
 
     cursor: pointer;
+
+    border: 0.1em solid ${selected ? Colors.strongCyan : Colors.darkCyan};
   `
 );
 
@@ -30,10 +31,7 @@ export const CustomGridItem = styled(GridItem)(
   ({ selected }) => css`
     text-transform: capitalize;
     color: ${selected ? Colors.darkCyan : Colors.darkGrayCyan1};
-    background: ${selected ? Colors.strongCyan : Colors.lightGrayCyan2};
+    background: ${Colors.lightGrayCyan2};
+    border-color: ${selected ? Colors.strongCyan : Colors.darkGrayCyan2};
   `
 );
-
-export const CustomTipInput = styled(Input)`
-  display: ${({ active }) => (active ? '' : 'none')};
-`;

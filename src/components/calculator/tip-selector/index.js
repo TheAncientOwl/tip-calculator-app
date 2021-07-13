@@ -1,12 +1,24 @@
 import { SectionTitle, Section } from '../CommonElements';
-import { CustomGridItem, CustomTipInput, Grid, GridItem } from './TipSelectorElements';
+import { CustomGridItem, Grid, GridItem } from './TipSelectorElements';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { InputField } from '../input/InputElements';
 
 const TipValues = [5, 10, 15, 25, 50];
 
 export default function TipSelector({ value, onSelect }) {
   const [customActive, setCustomActive] = useState(false);
+
+  const customContent = customActive ? (
+    <InputField
+      type='number'
+      placeholder='0'
+      value={value || ''}
+      onChange={e => onSelect(Math.abs(Number(e.target.value)))}
+    />
+  ) : (
+    'custom'
+  );
 
   return (
     <Section>
@@ -29,10 +41,9 @@ export default function TipSelector({ value, onSelect }) {
             onSelect(0);
           }}
           selected={customActive}>
-          custom
+          {customContent}
         </CustomGridItem>
       </Grid>
-      <CustomTipInput active={customActive} icon='%' value={value} onValueChange={value => onSelect(value)} />
     </Section>
   );
 }
