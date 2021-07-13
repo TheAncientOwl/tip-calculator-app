@@ -56,6 +56,8 @@ const Separator = styled.div`
   min-height: 2.5em;
 `;
 
+const DefaultPerson = { tip: '0.00', total: '0.00' };
+
 const calculate = (bill, tip, people, setZeroFlag) => {
   const totalTip = (tip / 100) * bill;
   const total = bill + totalTip;
@@ -67,7 +69,7 @@ const calculate = (bill, tip, people, setZeroFlag) => {
     return { tip: rounded(totalTip / people), total: rounded(total / people) };
   } else {
     if (bill && tip) setZeroFlag(true);
-    return { tip: '0.00', total: '0.00' };
+    return DefaultPerson;
   }
 };
 
@@ -76,13 +78,15 @@ export default function Calculator() {
   const [tip, setTip] = useState(0);
   const [people, setPeolple] = useState(0);
 
-  const [person, setPerson] = useState({ tip: '0.00', total: '0.00' });
+  const [person, setPerson] = useState(DefaultPerson);
   const [zeroFlag, setZeroFlag] = useState(false);
 
   const handleReset = () => {
     setBill(0);
     setTip(0);
     setPeolple(0);
+    setPerson(DefaultPerson);
+    setZeroFlag(false);
   };
 
   const handleBillChange = newBill => {
