@@ -1,9 +1,9 @@
 import { Container, Icon, InputField } from './InputElements';
 import PropTypes from 'prop-types';
 
-export default function Input({ icon, value, onValueChange }) {
+export default function Input({ icon, value, onValueChange, className }) {
   return (
-    <Container>
+    <Container className={className}>
       <Icon>{icon}</Icon>
       <InputField
         type='number'
@@ -19,4 +19,5 @@ Input.propTypes = {
   icon: PropTypes.any.isRequired,
   value: PropTypes.number.isRequired,
   onValueChange: PropTypes.func.isRequired,
+  className: PropTypes.any,
 };
