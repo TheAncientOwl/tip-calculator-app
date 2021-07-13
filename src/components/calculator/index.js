@@ -32,13 +32,14 @@ const Separator = styled.div`
 
 export default function Calculator() {
   const [billValue, setBillValue] = useState(0);
+  const [tipValue, setTipValue] = useState(0);
 
   return (
     <Container>
       <Column>
         <BillInput value={billValue} onValueChange={newValue => setBillValue(newValue)} />
         <Separator />
-        <TipSelector />
+        <TipSelector value={tipValue} onSelect={value => setTipValue(value)} />
         <Separator />
         <NumberOfPeopleInput />
       </Column>

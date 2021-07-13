@@ -1,5 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Colors from '../../../Colors';
+import Input from '../input/index';
 
 export const Container = styled.div``;
 
@@ -10,19 +11,27 @@ export const Grid = styled.div`
   margin-top: 1em;
 `;
 
-export const GridItem = styled.div`
-  font-size: 1.7em;
-  text-align: center;
-  color: ${Colors.white};
-  background: ${Colors.darkCyan};
-  padding: 0.4em 0.3em;
-  border-radius: 0.3em;
-  margin-bottom: 1em;
-  font-weight: bold;
-`;
+export const GridItem = styled.div(
+  ({ selected }) => css`
+    font-size: 1.7em;
+    text-align: center;
+    color: ${selected ? Colors.darkCyan : Colors.white};
+    background: ${selected ? Colors.darkGrayCyan2 : Colors.darkCyan};
+    padding: 0.4em 0.3em;
+    border-radius: 0.3em;
+    margin-bottom: 1em;
+    font-weight: bold;
+  `
+);
 
-export const CustomGridItem = styled(GridItem)`
-  text-transform: capitalize;
-  color: ${Colors.darkGrayCyan1};
-  background: ${Colors.lightGrayCyan2};
+export const CustomGridItem = styled(GridItem)(
+  ({ selected }) => css`
+    text-transform: capitalize;
+    color: ${selected ? Colors.darkCyan : Colors.darkGrayCyan1};
+    background: ${selected ? Colors.darkGrayCyan2 : Colors.lightGrayCyan2};
+  `
+);
+
+export const CustomTipInput = styled(Input)`
+  display: ${({ active }) => (active ? '' : 'none')};
 `;
